@@ -98,7 +98,7 @@ m₂ moves the most because its feature x₂ has the largest values (3 and 10), 
 
 | Order | Topic | Presenter |
 | --- | --- | --- |
-| 1 | Part 1: EM algorithm, tracking table, live test height, global-mean question | Person 1 |
+| 1 | Part 1: EM algorithm, tracking table, live test height, global-mean question | Sylivie |
 | 2 | Part 2: keyword choices and Bayes tables | Naomi |
 | 3 | Parts 3 and 4: derivation, manual updates, code and plots | Byiringiro Saad |
 
