@@ -6,7 +6,7 @@ Group project covering four parts: the EM algorithm on a mixture of Gaussians, B
 
 | Member          | Main responsibility                                    |
 | --------------- | ------------------------------------------------------ |
-| Person 1        | Part 1: Probability distributions and the EM algorithm |
+| Sylivie       | Part 1: Probability distributions and the EM algorithm |
 | Naomi           | Part 2: Bayesian probability on IMDb reviews           |
 | Byiringiro Saad | Parts 3 and 4: Gradient descent by hand and in code    |
 
