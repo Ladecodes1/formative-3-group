@@ -6,7 +6,7 @@ Group project covering four parts: the EM algorithm on a mixture of Gaussians, B
 
 | Member          | Main responsibility                                    |
 | --------------- | ------------------------------------------------------ |
-| Sylivie       | Part 1: Probability distributions and the EM algorithm |
+| Sylivie         | Part 1: Probability distributions and the EM algorithm |
 | Naomi           | Part 2: Bayesian probability on IMDb reviews           |
 | Byiringiro Saad | Parts 3 and 4: Gradient descent by hand and in code    |
 
@@ -63,15 +63,14 @@ The heights of children and fathers from the Galton families dataset are treated
 
 ### How to run
 
-Dependencies: numpy, pandas, matplotlib, ipykernel.
+With the environment from the main _How to run_ section active:
 
-```
-py -m pip install numpy pandas matplotlib ipykernel
+```bash
 cd part1
-py run_em.py
+python3 run_em.py
 ```
 
-For the notebook, open `part1/part1_em.ipynb` in VS Code and use Run All.
+On Windows, use `py` in place of `python3`. For the notebook, open `part1/part1_em.ipynb` and use Run All.
 
 Part 1 imports its helper files from the same folder, so it must run with the `part1/` folder next to it. In Colab, clone the repository first:
 
@@ -96,6 +95,12 @@ Part 1 imports its helper files from the same folder, so it must run with the `p
 | 2                  | 64.8745 | 69.5053 | 7.7363  | 6.9965  | 0.4960 | 0.5040 | -3052.1871     |
 
 Component 1 is the lower-height group and component 2 the upper-height group. After 200 iterations the means are 64.19 and 69.53 and the weights are 0.435 and 0.565.
+
+![EM fit: two-component Gaussian mixture over the heights](images/part1_em_fit.png)
+
+![Log-likelihood across EM iterations](images/part1_log_likelihood.png)
+
+The log-likelihood jumps in the first iteration and then barely moves, so almost all of the fitting happens in the first few steps.
 
 ### Test height classification
 
@@ -125,7 +130,11 @@ We compute **P(Positive | keyword)** for 4 positive and 4 negative keywords, usi
 | worst     | 0.0164                  | 0.0886         | 0.0924                 |
 | waste     | 0.0070                  | 0.0507         | 0.0687                 |
 
+![Posterior P(Positive | keyword) for each keyword](images/part2_posteriors.png)
+
 Every positive keyword lifts the chance of a positive review well above 0.5, and every negative keyword pushes it well below.
+
+One function, `analyse_keyword`, computes the prior, likelihood, marginal and posterior from a single counting helper. It is used for the worked example (excellent) and for all eight keywords, and it checks that Bayes' theorem matches the direct count.
 
 ## Part 3: Gradient descent by hand
 
@@ -146,8 +155,10 @@ Agreed conventions:
 | -------- | ------- | ------ | ------ | ------- | --------------- |
 | Start    | −1.0000 | 2.0000 | 1.0000 | 61.0000 |                 |
 | Update 1 | −1.2250 | 1.4350 | 0.9400 | 10.1163 | Byiringiro Saad |
-| Update 2 | −1.3079 | 1.2302 | 0.9230 | 3.4221  | Person 1        |
+| Update 2 | −1.3079 | 1.2302 | 0.9230 | 3.4221  | Sylivie         |
 | Update 3 | −1.3393 | 1.1559 | 0.9215 | 2.5323  | Naomi           |
+
+The full working for every update is in [`part3_manual_calculations.pdf`](part3_manual_calculations.pdf): the setup and derivation plus Update 1 (pages 1–3), Update 2 (page 4) and Update 3 (pages 5–6).
 
 ## Part 4: Gradient descent in code
 
@@ -166,7 +177,7 @@ m₂ moves the most because its feature x₂ has the largest values (3 and 10), 
 | Order | Topic                                                                        | Presenter       |
 | ----- | ---------------------------------------------------------------------------- | --------------- |
 | 1     | Part 1: EM algorithm, tracking table, live test height, global-mean question | Sylivie         |
-| 2     | Part 2: keyword choices and Bayes tables                                     | Naomi           |
+| 2     | Part 2: keyword choices, Bayes tables and posterior chart                    | Naomi           |
 | 3     | Parts 3 and 4: derivation, manual updates, code and plots                    | Byiringiro Saad |
 
 The full presentation is 15 minutes, followed by questions for any member.
