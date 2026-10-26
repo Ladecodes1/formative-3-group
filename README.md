@@ -180,4 +180,6 @@ m₂ moves the most because its feature x₂ has the largest values (3 and 10), 
 | 2     | Part 2: keyword choices, Bayes tables and posterior chart                    | Naomi           |
 | 3     | Parts 3 and 4: derivation, manual updates, code and plots                    | Byiringiro Saad |
 
+[Team Task Sheet] (https://drive.google.com/file/d/14bRgKfJVvLGKxroiCfwATLo30EGhE_Eh/view?usp=sharing)
+
 The full presentation is 15 minutes, followed by questions for any member.
